@@ -198,6 +198,7 @@ func (de *directoryEntryInfo) Info() (iofs.FileInfo, error) {
 		size:    int64(de.size),
 		isDir:   isDir,
 		mode:    mode,
+		sys:     de.inode.stat(),
 	}, nil
 }
 
